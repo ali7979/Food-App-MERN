@@ -1,38 +1,388 @@
-.App {
-  text-align: center;
+
+/*PAlleettee
+#0B2447
+#19376D
+#576CBC
+#A5D7E8
+
+
+*/
+
+.light-mode
+{
+	--l0:#ffffff;
+	--l1:#A5D7E8;
+	--l2:#0B2447;
+	--l3:#19376D;
+	--l4:#0B2447;
+	--b:1;
+	--sidebar:#0B2447;
+	
+}
+.dark-mode
+{
+	
+	--l0:#0B2447;
+	--l1:#576CBC;
+	--l2:#576CBC;
+	--l3:#A5D7E8;
+	--l4:#ffffff;
+	--b:100;
+	--sidebar:#19376D;
+	
+	
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+.yl{
+  color: #A5D7E8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@900&display=swap');
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  background-color: var(--l0);
+  color: var(--l4);
+  
+}
+.container{
+  font-family: "'M PLUS Rounded 1c', sans-serif";
+}
+.heading{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: var(--l4);
+  text-align: left;
+  font-size: 2.8rem;
+  line-height: 1.1;
+
+}
+.ylw{
+  color: #576CBC;
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+.pp
+{
+  font-size: 1rem;
+ color: #98bbc7;
+ font-weight: 100;
+  font-family: 'Raleway', sans-serif;
+  margin-top: -3rem;
+  margin-bottom: 4rem;
+}
+.btn{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+.crsl label {
+	background: #444;
+	color: #fff;
+	transition: transform 400ms ease-out;
+	display: inline-block;
+  min-height: 70%;
+	width: 99vw;
+	height: 70vh;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	line-height: 70vh;
+	/* border-top-left-radius:80px 30px;
+	border-top-right-radius: 80px 30px;
+	border-bottom-left-radius:80px 30px;
+	border-bottom-right-radius: 80px 30px; */
+}
+
+.crsl form {
+	overflow: hidden;
+	white-space: nowrap;
+}
+.crsl form input {
+	position: absolute;
+}
+
+.crsl .keys {
+	position: absolute;
+	z-index: 10;
+	top: 70%;
+  margin-left: 40%;
+	padding: 1rem;
+	color: #fff;
+	text-align: center;
+	transition: all 300ms linear;
+	opacity: 0;
+}
+
+.crsl form input:focus ~ .keys {
+	opacity: 0.8;
+}
+
+.crsl form input:nth-of-type(1):checked ~ label:nth-of-type(1), 
+.crsl form input:nth-of-type(2):checked ~ label:nth-of-type(2),
+.crsl form input:nth-of-type(3):checked ~ label:nth-of-type(3),
+.crsl form input:nth-of-type(4):checked ~ label:nth-of-type(4){
+   z-index: 0;
+}
+
+.crsl form input:nth-of-type(1):checked ~ label {
+	transform: translate3d(0, 0, 0);
+}
+
+.crsl form input:nth-of-type(2):checked ~ label {
+	transform: translate3d(-100%, 0, 0);
+}
+
+.crsl form input:nth-of-type(3):checked ~ label {
+	transform: translate3d(-200%, 0, 0);
+}
+
+.crsl form input:nth-of-type(4):checked ~ label {
+	transform: translate3d(-300%, 0, 0);
+}
+
+.crsl form label {
+	background: #444;
+	background-size: cover;
+	font-size: 3rem;
+}
+
+.crsl form label[for="diamonds"],
+.crsl form label[for="hearts"] {
+	background: #cc0000;
+}
+
+.crsl form label[for="hearts"] {
+	background: url("./images/Red\ and\ Yellow\ Simple\ Modern\ Food\ Pizza\ Promo\ Banner.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.crsl form label[for="diamonds"] {
+	background: url("./images/Yellow\ and\ Navy\ Illustrated\ Japanese\ Food\ Banner\ Landscape.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.crsl form label[for="spades"] {
+	background: url("./images/blue\ yellow\ gradient\ elegant\ doodle\ food\ sale\ banner.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.crsl label:before,
+.crsl label:after {
+	color: white;
+	display: block;
+	background: rgba(255,255,255,0.2);
+	position: absolute;
+	padding: 1rem;
+	font-size: 3rem;
+	height: 10rem;
+	
+	line-height: 10rem;
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+	cursor: pointer;
+}
+
+.crsl label:before {
+	content: "\276D";
+	right: 100%;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
+.crsl label:after {
+	content: "\276C";
+	left: 100%;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+.container{
+	display: flex;
+	flex-direction: row;
+}
+
+
+
+.sidebar{
+	
+	width: 250px;
+	height: fit-content;
+	left: 0;
+	border-top-right-radius:14rem 8rem;
+	background: var(--sidebar);
+	padding-top: 50px;
+	padding-bottom: 150px;
+	border-bottom-right-radius:14rem 8rem;
+	margin-top: 2rem;
+
+ }
+ 
+ .sidebar h1{
+	display: block;
+	padding: 30px 20px;
+	color: #fff;
+	text-decoration: none;
+	font-family:'M PLUS Rounded 1c', sans-serif;
+	letter-spacing: 2px;
+	font-weight: 400;
+	margin: 0;
+	font-size: 25px;
+	text-transform: uppercase;
+ }
+ 
+ .sidebar a{
+	display: block;
+	padding: 10px 20px;
+	color: #A5D7E8;
+	text-decoration: none;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 2px;
+ }
+
+ 
+ .sidebar a:hover{
+	color: #fff;
+	margin-left: 20px;
+	transition: 0.4s;
+ }
+
+
+ 
+
+
+
+
+
+
+.br{
+	margin: 0px;
+  padding: 0px;
+  
+  height: 10vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: var(--l0);
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+
+
+
+  .search-box{
+	margin-top: 2rem;
+	width: fit-content;
+	height: fit-content;
+		position:relative
+		
   }
-  to {
-    transform: rotate(360deg);
+  .input-search{
+	height: 1.6rem;
+	width: 0rem;
+	border-style: none;
+
+	padding: 10px;
+	font-size: 30px;
+	letter-spacing: 2px;
+	outline: none;
+	border-radius: 50px;
+	transition: all .5s ease-in-out;
+	background-color: #19376D;
+	padding-right: 40px;
+	color:#0B2447;
   }
-}
+  .input-search::placeholder{
+	color:#576CBC;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-weight: 100;
+  }
+  .btn-search{
+	
+	width: 50px;
+	height: 50px;
+	border-style: none;
+	font-size: 20px;
+	font-weight: bold;
+	outline: none;
+	cursor: pointer;
+	border-radius: 50%;
+	position: absolute;
+	right: 0px;
+	color:#ffffff ;
+	background-color:transparent;
+	pointer-events: painted;  
+  }
+  .btn-search:focus ~ .input-search{
+	width: 300px;
+	border-radius: 0px;
+	background-color: transparent;
+	border-bottom:2px solid #0B2447;
+	transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  .input-search:focus{
+	width: 300px;
+	border-radius: 0px;
+	background-color: transparent;
+	border-bottom:2px solid #0B2447;
+	transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  
+  /*PAlleettee
+#0B2447
+#19376D
+#576CBC
+#A5D7E8
+
+
+*/
+
+.sidebrsrch .btn-search:focus ~ .input-search {
+	width: 5rem;
+	margin: 0 -1rem;
+	color: white;
+  }
+  .sidebrsrch .input-search:focus{
+	width: 8rem;
+	margin: 0 -1rem;}
+	.sidebrsrch .input-search{
+		color: white;
+	}
+	
+	.Cart-Container{
+		width: 70%;
+		height: 85%;
+		background-color: #ffffff;
+		border-radius: 20px;
+		box-shadow: 0px 25px 40px #1687d933;
+	   }
+	   .Header{
+		margin: auto;
+		width: 90%;
+		height: 15%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	   }
+	   .Heading{
+		color: #2F3841;
+	   }
+	   .Action{
+		font-size: 14px;
+		font-weight: 600;
+		color: #E44C4C;
+		cursor: pointer;
+		border-bottom: 1px solid #E44C4C;
+	   }
+
+	   
