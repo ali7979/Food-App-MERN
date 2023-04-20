@@ -46,7 +46,7 @@ useEffect(()=>{
 
 <div className='br'>
 <div className="search-box">
-    <button className="btn-search"><i className="fas fa-search"></i></button>
+    <button className="btn-search"><SearchIcon/></button>
     <input onChange={(e)=> setquery(e.target.value)}   type="text" className="input-search" placeholder="Type to Search..."/>
   </div>
 </div>
