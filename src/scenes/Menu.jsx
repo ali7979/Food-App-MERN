@@ -18,7 +18,7 @@ const [query, setquery] = useState("")
 
 const loaddata=async()=>{
 
-    const response = axios.get("https://food-app-mern-backend.vercel.app/api/fetch");
+    const response = await axios.get("https://food-app-mern-backend.vercel.app/api/fetch");
     console.log(response);
     setfooditem(response)
 }
