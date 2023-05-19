@@ -7,6 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Searchbar from '../components/Searchbar';
 import ScrolltoTop from '../components/ScrolltoTop';
 import logo from '../images/Logo.svg'
+import axios from 'axios';
 
 
 export default function Menu() {
@@ -17,15 +18,9 @@ const [query, setquery] = useState("")
 
 const loaddata=async()=>{
 
-    let res=await fetch("https://food-app-mern-backend.vercel.app/api/fetch",{
-        method:"GET",
-        headers:{
-            'Content-Type':'application/json'
-        }
-    });
-    res=await res.json();
-    console.log(res);
-    setfooditem(res)
+    const response = axios.get("https://food-app-mern-backend.vercel.app/api/fetch");
+    console.log(response);
+    setfooditem(response)
 }
 
 useEffect(()=>{
