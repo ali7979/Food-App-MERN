@@ -15,14 +15,15 @@ const dotenv=require('dotenv').config();
    
 //     next();
 // });
+app.use(cors({
+  origin: ['https://food-app-mern-three.vercel.app','http://localhost:3000',
+  'https://food-app-mern-backend.vercel.app']
+}));
 
 app.use(express.json())
 
 
-app.use(cors({
-  origin: 'https://food-app-mern-three.vercel.app',
-  
-}));
+
 
 app.get('/', (req, res) => {
   res.send('Backend Runnig')
