@@ -20,7 +20,7 @@ app.use(express.json())
 
 
 app.use(cors({
-  origin: 'https://food-r04qzn3f7-ali7979.vercel.app',
+  origin: 'https://food-app-mern-three.vercel.app',
   
 }));
 
