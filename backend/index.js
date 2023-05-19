@@ -1,12 +1,8 @@
 const express = require('express')
 const connectdb = require('./db/Connectdb')
 const app = express()
-const port = 5000
 
-
-
-
-
+const dotenv=require('dotenv').config();
 
 app.use((req, res, next)=> {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -23,14 +19,12 @@ app.use(express.json())
 app.get('/', (req, res) => {
   res.send('Backend Runnig')
  
-
 })
 
 connectdb();
 
 app.use("/api",require("./routes/CreateUser"))
 app.use("/api",require("./routes/Fetch"))
-
-app.listen(port, () => {
-  console.log(`app listening on port ${port}`)
+app.listen(process.env.PORT, () => {
+  console.log(`app listening on port ${process.env.PORT}`)
 })

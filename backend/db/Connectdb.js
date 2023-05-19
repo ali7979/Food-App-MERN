@@ -1,8 +1,7 @@
 const mongoose=require("mongoose");
-uri="mongodb+srv://zoheb:zoheb7979@zohebdb.z434ks5.mongodb.net/ZohebDB?retryWrites=true&w=majority";
 const connectdb=async()=> {
     try {
-        await mongoose.connect(uri, {
+        await mongoose.connect(process.env.MONGODB_URI, {
           useNewUrlParser: true,
           useUnifiedTopology: true,
         });

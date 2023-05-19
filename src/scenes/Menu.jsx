@@ -16,7 +16,8 @@ const [fooditem,setfooditem]=useState([])
 const [query, setquery] = useState("")
 
 const loaddata=async()=>{
-    let res=await fetch("http://localhost:5000/api/fetch",{
+
+    let res=await fetch("https://food-app-mern-backend.vercel.app/api/fetch",{
         method:"GET",
         headers:{
             'Content-Type':'application/json'

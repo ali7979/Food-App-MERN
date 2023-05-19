@@ -14,14 +14,6 @@ const Mycart = () => {
 const {cart} =useCartContext();
 console.log(cart)
 
-
-  
-     
-
-  
-
-
-
   return (
     <div style={{ margin: '0',
         padding: '0',background: 'linear-gradient(to bottom right, #E3F0FF, #FAFCFF)',
