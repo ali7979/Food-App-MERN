@@ -45,7 +45,7 @@ function Login() {
          const email=data.get('email')
         
         
-        const res= await fetch("https://food-app-mern-backend.vercel.app/api/loginuser",{
+        const res= await fetch("https://food-backemd.onrender.com/api/loginuser",{
             method:"POST",
             headers:{
                 'Content-Type':'application/json'

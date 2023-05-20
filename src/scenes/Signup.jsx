@@ -37,7 +37,7 @@ import { useContext } from 'react';
     const password=data.get('password')
     
     
-    const res= await fetch("https://food-app-mern-backend.vercel.app/api/createuser",{
+    const res= await fetch("https://food-backemd.onrender.com/api/createuser",{
         method:"POST",
         headers:{
             'Content-Type':'application/json'

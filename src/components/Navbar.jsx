@@ -19,7 +19,7 @@ import ModeNightIcon from "@mui/icons-material/ModeNight";
 import { NavLink, useNavigate } from "react-router-dom";
 import { ThemeContext } from "../App";
 
-const pages = ["Signup", "Offer","Order"];
+const pages = ["Offer","Order","About"];
 const settings = ["Profile", "Payment Methods", "Logout"];
 
 function Navbar() {
@@ -186,10 +186,35 @@ function Navbar() {
                 {" "}
                 <ModeNightIcon />
               </Button>
+              {localStorage.getItem("authToken") ? (
+              <>
+              
+                </>
+              ) : (<><Link
+                key="Signup"
+                to='/signup'
+                replace
+                style={{ textDecoration: "none" }}
+              >
+                <div
+                  key="Signup"
+                  style={{
+                    fontFamily: "M PLUS Rounded 1c",
+                    fontSize: "1.2rem",
+                    color: theme ? "white" : "var(--l2)",
+                    margin: "1.5rem 2rem",
+                    cursor: "pointer",
+                  }}
+                >
+                  Signup
+                </div>
+              </Link> </>)
+                  }
               {pages.map((page) => (
                 <Link
                   key={page}
-                  to={`../${page}`}
+                  to={`/${page}`}
+                  replace
                   style={{ textDecoration: "none" }}
                 >
                   <div
@@ -232,7 +257,7 @@ function Navbar() {
               ) : (
                 <NavLink
                 key="Login"
-                to="./login"
+                to="/login"
                 style={{ textDecoration: "none" }}
               >
                 <div
